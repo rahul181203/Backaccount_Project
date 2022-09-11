@@ -1,0 +1,12 @@
+{% extends "layouts.html" %}
+
+{% block header %}
+<title>{%block title%}Dasshboard{%endblock%}</title>
+{% endblock %}
+
+{% block body %}
+      First Name  : {{user.first_name}}<br>
+      Last Name : {{user['last_name']}}<br>
+      Email : {{user['email']}}<br>
+
+{% endblock %}

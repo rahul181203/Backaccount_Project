@@ -1,0 +1,34 @@
+{%extends "layouts.html"%}
+
+{% block header %}
+<title>{%block title%}Trinity-signup{%endblock%}</title>
+<link {% block head %} rel="stylesheet" href="static/signup.css"{%endblock%}>
+{% endblock %}
+
+{%block body%}
+    <div class="signup">
+        <h1 style="text-align: center; padding-top: 20px;">SIGN UP</h1>
+        <form action="{{url_for('function')}}" method="post">
+            <input name="fname" placeholder="First Name" type="text" autofocus="on" autocomplete="off" required>
+            <input name="lname" placeholder="Last Name" type="text" autocomplete="none" required><br>
+            <input name="mobile" style="width: 392px;" placeholder="Mobile Number" type="text" autocomplete="none" required>
+            <input name="email" style="width: 392px;" placeholder="email" type="email" autocomplete="none" required>
+            <label for="">Date of birth:</label>
+            <input name="birth" type="date" placeholder="Date Of Birth" autocomplete="none" required><br>
+            <label for="">Gender:</label>
+            <select name="gender" id="" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="rather not say">Rather not say</option>
+            </select><br>
+            <input name="password" style="width: 392px;" type="password"  placeholder="New Password" autocomplete="none" required>
+            <input style="width: 392px;" type="password" name="cpassword" placeholder="Confirm Password" autocomplete="none" required>
+            {% if password != cpassword: %}
+                <p style="color:red">Password doesnot match</p>
+            {% elif '{{len(password) < int(9):}}' %}
+                <p style="color:red">Password must be grater than 8 letters</p>
+            {% endif %}
+            <button class="btn btn-outline-primary button" type="submit">SIGN UP</button>
+        </form>
+    </div>
+{%endblock%}

@@ -1,0 +1,23 @@
+{% extends "layouts.html" %}
+
+{% block header %}
+<title>{%block title%}Trinity-SignIN{%endblock%}</title>
+<link {% block head %} rel="stylesheet" href="static/styles.css"{% endblock %}>
+{% endblock %}
+
+{% block body %}
+    <h1>Welcome to Virtual Bank</h1>
+    <div class="box">
+        <form action="{{url_for('sign')}}" method="post">
+            <h2>SIGN IN</h2>
+            <input class="number" type="email" name= "email" placeholder="Email" autofocus="on" autocomplete="off" required><br>
+            <input class="password" type="password" name="password" placeholder="Password" autocomplete="off" required><br>
+            <p style="color: red;">{{dne}}</p>
+            <button class="btn btn-primary button" type="submit">Sign In</button><br>
+            <p style="color: red;">{{incorrect}}</p>
+            <a href="{{url_for('forgot_password')}}">Forgot Password?</a>
+            <hr>
+            <a class="btn btn-success" href="{{url_for('function')}}">Create New Account</a>
+        </form>
+    </div>
+{%endblock%}

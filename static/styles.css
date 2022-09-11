@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Zen Antique', serif;
+    margin: 8px;
+}
+
+.number {
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.password {
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px
+}
+
+h1{
+    padding: 20px;
+}
+
+input{
+    margin: 10px;
+    width: 250px;
+}
+
+hr{
+    border-bottom: 1px solid;
+    margin: 20px 16px;
+
+}
+
+.box{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: auto 500px;
+    background-color:lightcoral;
+    border-radius: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: rebeccapurple;
+}
+p {
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

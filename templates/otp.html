@@ -1,0 +1,19 @@
+{% extends "layouts.html" %}
+{% block header %}
+<title>{%block title%}Verify{%endblock%}</title>
+{% endblock %}
+{% block body %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <form action="{{url_for('verify')}}" method="post">
+                <h3 class="display-4">We have send an otp to your mail.</h3>
+                <label for="otp">OTP:</label>
+                <input type="text" name="otp" autofocus="on" required>
+                <button class="btn btn-primary" type="submit">submit</button>
+                {% if otp != user_otp %}
+                    <p style="color: red;">Enter the correct otp</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+{% endblock %}

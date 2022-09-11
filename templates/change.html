@@ -1,0 +1,27 @@
+{% extends "layouts.html" %}
+
+{% block header %}
+<title>{%block title%}Change Password{%endblock%}</title>
+{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <form action="/keeppassword" method="post">
+                <div class="form-group">
+                    <h3 class="display-4">Change your Password</h3>
+                    <label for="newpass">New Password</label>
+                    <input class="form-control" type="password" name="newpass" autocomplete="off" autofocus="on" placeholder="New password">
+                </div>
+                <div class="form-group">
+                    <label for="conformpass">Confirm Password</label>
+                    <input class="form-control" type="password" name="confirmpass" placeholder="confirm password" autocomplete="off" >
+                </div>
+                    {{match}}
+                    <button class="btn btn-primary" type="submit">Change password</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

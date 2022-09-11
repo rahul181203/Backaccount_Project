@@ -1,0 +1,40 @@
+body{
+    background-color: tomato;
+    margin: 10px;
+}
+
+h1{
+    font-family: 'Zen Antique', serif;;
+}
+
+.signup{
+    margin:100px 220px auto 800px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+form{
+    margin:auto auto auto 20px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+input{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+label{
+    margin-left:20px;
+}
+
+select{
+    margin-left: 50px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.button{
+    margin-bottom: 30px;
+    margin-left: 300px;
+}
